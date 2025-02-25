@@ -3,6 +3,10 @@ const heart = require("../../../assets/images/heart1.png");
 const bike = require("../../../assets/images/bike2.png");
 const term = require("../../../assets/images/umbrella1.png");
 const insurance = require("../../../assets/images/insurance.png");
+const img1 = require("../../../assets/images/img1.png");
+const img2 = require("../../../assets/images/img2.png");
+const img3 = require("../../../assets/images/img3.png");
+
 
  export const allInsuranceData = [  
  {
@@ -50,15 +54,15 @@ export const allInsuranceData2 = [
             text: "Trusted by 3L+ users",
         },
         {
-            image: insurance,
+            image: img3,
             text: "Top insurers",
         },
         {
-            image: insurance,
+            image: img1,
             text: "24*7 claims assistance",
         },
         {
-            image: insurance,
+            image: img2,
             text: "Best Value",
         },
 

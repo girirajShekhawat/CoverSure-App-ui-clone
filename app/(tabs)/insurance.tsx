@@ -93,9 +93,9 @@ export default function Insurance() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
           alignItems: "center",
-          gap: 10,
+          gap: 12,
           marginHorizontal: 20,
           marginTop: 20,
           flexWrap: "wrap",
@@ -107,6 +107,7 @@ export default function Insurance() {
             style={{
               flexDirection: "column",
               gap: 10,
+              justifyContent: "space-between",
               backgroundColor: "white",
               padding: 10,
               borderRadius: 10,
@@ -119,8 +120,8 @@ export default function Insurance() {
             />
             <Text
               style={{
-                fontSize: 12,
-                fontWeight: 600,
+                fontSize: 10,
+                fontWeight: 700,
                 fontFamily: "DMSans",
                 color: "black",
               }}
@@ -153,7 +154,7 @@ export default function Insurance() {
           <Text
             style={{
               fontFamily: "DMSans",
-              fontSize: 14,
+              fontSize: 10,
               color: "#333",
             }}
           >
