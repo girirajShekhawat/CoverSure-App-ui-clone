@@ -68,4 +68,6 @@ export const allInsuranceData2 = [
 
 ]
 
+export const certifications = ["IRDAI regulated", "ISO 27001 Compliant", "Google Certified"]
+    
  

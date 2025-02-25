@@ -1,7 +1,7 @@
 import { View, Text, Image } from "react-native";
 import AllInsurance from "../(components)/(insurance)/allInsurance";
 import { ChevronLeft } from "lucide-react-native";
-import { allInsuranceData2 } from "../(utils)/(insurance)/allInsuranceData";
+import { allInsuranceData2, certifications } from "../(utils)/(insurance)/allInsuranceData";
 
 export default function Insurance() {
   return (
@@ -135,7 +135,12 @@ export default function Insurance() {
       {/* Footer with security certifications */}
       <View
         style={{
-          padding: 20,
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 10,
+          marginHorizontal: 20,
+          marginTop: 10,
         }}
       >
         {/* Security badge row */}
@@ -145,6 +150,7 @@ export default function Insurance() {
             alignItems: "center",
             justifyContent: "center",
             marginBottom: 15,
+            marginTop: 15,
           }}
         >
           <Image
@@ -155,6 +161,7 @@ export default function Insurance() {
             style={{
               fontFamily: "DMSans",
               fontSize: 10,
+              fontWeight: 700,
               color: "#333",
             }}
           >
@@ -166,32 +173,36 @@ export default function Insurance() {
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "space-around",
+            justifyContent: "center",
             alignItems: "center",
+            gap: 12,
             borderTopWidth: 1,
             borderBottomWidth: 1,
-            borderTopColor: "#e0e0e0",
-            borderBottomColor: "#e0e0e0",
-            paddingBottom: 15,
-            paddingTop: 15,
+            borderTopColor: "#DCDFEE",
+            borderBottomColor: "#DCDFEE",
+            paddingBottom: 10,
+            paddingTop: 10,
+            width: "100%",
           }}
         >
-          <Text style={{ color: "#666", fontSize: 12 }}>IRDAI regulated</Text>
-          <Text style={{ color: "#666", fontSize: 12 }}>•</Text>
-          <Text style={{ color: "#666", fontSize: 12 }}>
-            ISO 27001 Compliant
-          </Text>
-          <Text style={{ color: "#666", fontSize: 12 }}>•</Text>
-          <Text style={{ color: "#666", fontSize: 12 }}>Google Certified</Text>
+            {certifications.map((item, index) => (
+                <View key={index} style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                    <Text style={{ color: "#000000", fontSize: 10 }}>{item}</Text>
+               {index !== certifications.length - 1 && <View style={{ backgroundColor: "#9C9EA3", height: 8, width: 8 }}></View>}
+                </View>
+            ))}
+          
         </View>
 
         {/* Registration info */}
         <Text
           style={{
             textAlign: "center",
-            fontSize: 11,
+            fontSize: 10,
             color: "#888",
             lineHeight: 16,
+            marginTop: 5,
+            fontFamily: "DMSans",
           }}
         >
           IRDAI Reg No. CA0894 | Category: Corporate Agent (Composite) |{"\n"}
