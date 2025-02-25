@@ -3,14 +3,15 @@ import { allInsuranceData } from "@/app/(utils)/(insurance)/allInsuranceData";
 export default function AllInsurance() {
   return (
     <View style={styles.container}>
-         <View style={styles.cardContainer}>
+    <View style={styles.cardContainer}>
       {allInsuranceData.map((item, index) => (
         <View key={index} style={styles.card}> 
           <Text style={styles.title}>{item.title}</Text>
           <Image source={ item.image } style={styles.image}  />
+          <View> 
           <Text style={styles.text}>{item.text}</Text>
           <Text style={styles.description}>{item.description}</Text>
-           
+          </View>
           </View>
 
       ))}
@@ -30,11 +31,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 12,
     fontFamily:"DM Sans",
-    fontWeight: 600,
+    fontWeight: 700,
     color: "white",
   },
   text: {
-    fontSize: 10,
+    fontSize: 9,
     fontFamily:"DM Sans",
     fontWeight: 400,
   
@@ -43,15 +44,21 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 10,
     fontFamily:"DM Sans",
-    fontWeight: 400,
+    fontWeight: 700,
     color: "white",
   },
   image: {
-    width: 75,
-    height: 40,
+    position: "absolute",
+    top: 28,
+    right: 5,
+    width: 60,
+    height: 60,
     resizeMode: "contain",
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
     marginLeft: "auto",
-     
+   
   },
   content: {
     flex: 1,
@@ -59,23 +66,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   card: {
-    backgroundColor: "#3a61d5",
-    paddingHorizontal: 16,
+    backgroundColor: "#2753D2",
+    paddingHorizontal: 12,
     paddingVertical: 12,
-    borderRadius: 8,
-    width: "29%",
-    height: "32%",
+    borderRadius: 12,
+    width: "31%",
+    height: "45%",
     flexDirection: "column",
+    justifyContent: "space-between",
     gap: 0,
+    overflow: "hidden",
      
   },
   cardContainer: {
-    
+    display: "flex",
     flexDirection: "row",
-    gap: 20,
-    justifyContent: "space-evenly",
-    alignItems: "center",
+    gap: 14,
+    justifyContent: "space-between",
     flexWrap: "wrap",
     width: "100%",
+    height: "100%",
   }
 });

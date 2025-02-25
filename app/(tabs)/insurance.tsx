@@ -1,48 +1,49 @@
 import { View, Text, Image } from "react-native";
 import AllInsurance from "../(components)/(insurance)/allInsurance";
-import { CircleChevronLeft } from "lucide-react-native";
+import { ChevronLeft } from "lucide-react-native";
 import { allInsuranceData2 } from "../(utils)/(insurance)/allInsuranceData";
 
 export default function Insurance() {
   return (
-    <View style={{ height: "100%", width: "100%", backgroundColor: "#f0f0f0" }}>
+    <View style={{ height: "100%", width: "100%", backgroundColor: "#F3F4F9" }}>
       {/* upper part */}
       <View
         style={{
           height: "40%",
           width: "100%",
-          backgroundColor: "#1c48cc",
+          backgroundColor: "#0032C7",
           borderBottomLeftRadius: 20,
           borderBottomRightRadius: 20,
+          overflow: "hidden",
         }}
       >
         <View
           style={{
+            height: 50,
             flexDirection: "row",
             justifyContent: "flex-start",
             gap: 5,
             alignItems: "center",
+            padding: 5,
           }}
         >
           {" "}
-          <CircleChevronLeft
-            size={30}
+          <ChevronLeft
+            size={40}
             color="black"
             style={{
               backgroundColor: "white",
-              marginLeft: 10,
-              marginTop: 22,
+              marginLeft: 0,
               borderRadius: 100,
-              padding: 12,
             }}
           />
           <Text
             style={{
               fontSize: 20,
-              fontWeight: "bold",
+              fontWeight: 700,
               color: "white",
               marginLeft: 20,
-              marginTop: 20,
+              fontFamily: "DMSans",
             }}
           >
             Get Insured
@@ -56,9 +57,10 @@ export default function Insurance() {
         style={{
           marginTop: 20,
           flexDirection: "column",
-          gap: 5,
           alignItems: "center",
           justifyContent: "center",
+          marginHorizontal: 20,
+          gap: 5,
         }}
       >
         <Text
@@ -66,7 +68,7 @@ export default function Insurance() {
             fontSize: 16,
             fontWeight: 800,
             color: "black",
-            marginLeft: 20,
+
             fontFamily: "DMSans",
           }}
         >
@@ -76,9 +78,10 @@ export default function Insurance() {
           style={{
             fontSize: 12,
             fontWeight: 400,
-            color: "grey",
-            marginLeft: 20,
+            color: "#767880",
             fontFamily: "DMSans",
+            textAlign: "center",
+            lineHeight: 15,
           }}
         >
           CoverSure makes insurance rasy to understand, simple to choose, and
