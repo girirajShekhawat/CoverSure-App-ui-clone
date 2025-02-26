@@ -1,12 +1,16 @@
 import { View, Text, Image } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import AllInsurance from "../(components)/(insurance)/allInsurance";
 import { ChevronLeft } from "lucide-react-native";
 import { allInsuranceData2, certifications } from "../(utils)/(insurance)/allInsuranceData";
 
 export default function Insurance() {
   return (
+    <View> 
+     
     <View style={{ height: "100%", width: "100%", backgroundColor: "#F3F4F9" }}>
       {/* upper part */}
+        
       <View
         style={{
           height: "40%",
@@ -17,6 +21,7 @@ export default function Insurance() {
           overflow: "hidden",
         }}
       >
+             
         <View
           style={{
             height: 50,
@@ -27,13 +32,14 @@ export default function Insurance() {
             padding: 5,
           }}
         >
-          {" "}
+          
           <ChevronLeft
-            size={40}
+            size={18}
             color="black"
             style={{
+                padding: 20,
               backgroundColor: "white",
-              marginLeft: 0,
+              marginLeft: 16,
               borderRadius: 100,
             }}
           />
@@ -209,6 +215,7 @@ export default function Insurance() {
           Validity: till 9th Jan'2027
         </Text>
       </View>
+    </View>
     </View>
   );
 }

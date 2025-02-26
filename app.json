@@ -16,6 +16,11 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
+      
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#0032C7",
+      "barStyle": "light-content"
     },
     "web": {
       "bundler": "metro",
