@@ -94,5 +94,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     width: "100%",
     height: "100%",
-  }
+  },
+  cardImage: {
+    width: 60,
+    height: 60,
+    resizeMode: "contain",
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    marginLeft: "auto",
+  },
 });
